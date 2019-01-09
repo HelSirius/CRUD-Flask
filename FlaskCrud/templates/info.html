@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+
+ 	Hi {{ current_user.username }}!
+ 	<h1>successfull submission</h1>
+ 	{% endif %}
+
+  <h1>Details</h1>
+    {% for info in details %}
+      <p>{{info.websitename}}</p>
+      <p>{{info.websiteurl}}</p>
+      <p>{{info.websitedetails}}</p>
+    {% endfor %}
+
+
+
+{% endblock %}
